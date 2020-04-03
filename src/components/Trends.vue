@@ -1,0 +1,29 @@
+<template>
+  <list-header title="Indonesia Trends">
+      <div class="p-2 hover:bg-gray-300 border-b-2 rounded-lg" v-for="n in 4" :key="n.id">
+        <div class="flex justify-between items-center">
+          <h5 class="text-sm text-gray-600">1. Trending</h5>
+          <a
+            href="#"
+            class="hover:text-blue-300 hover:bg-gray-200 flex items-center rounded-full text-center p-2 text-blue-500"
+          >+</a>
+        </div>
+        <h2 class="font-bold">#NASA</h2>
+        <p class="font-lighter text-gray-600">8241 Tweets</p>
+      </div>
+  </list-header>
+</template>
+
+<script>
+import ListHeader from '@/components/ListHeader'
+
+export default {
+  name: 'Trends',
+  components: {
+    ListHeader
+  }
+}
+</script>
+
+<style>
+</style>

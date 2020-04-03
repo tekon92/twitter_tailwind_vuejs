@@ -1,16 +1,22 @@
 <template>
   <div class="w-full">
-    <timeline v-for="n in 10" :key="n.id"/>
+    <trends />
+    <timeline />
   </div>
 </template>
 
 <script>
+import Trends from '@/components/Trends'
 import Timeline from '@/components/Timeline'
 
 export default {
-  name: 'Home',
+  name: 'Explore',
   components: {
+    Trends,
     Timeline
   }
 }
 </script>
+
+<style>
+</style>
