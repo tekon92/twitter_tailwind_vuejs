@@ -1,21 +1,11 @@
 <template>
-  <div class="relative w-full round-full">
+  <div class="relative w-full">
     <input
       type="search"
       placeholder="Search"
-      class="w-full bg-gray-800 text-sm text-white transition border border-transparent focus:outline-none focus:border-gray-700 rounded py-1 px-2 pl-10 appearance-none leading-normal"
+      class="rounded-full w-full bg-gray-300 text-sm text-black transition border border-transparent focus:outline-none focus:border-gray-700 rounded py-1 px-2 pl-10 appearance-none leading-normal placeholder-gray-500 h-10"
     />
-    <div class="absolute search-icon" style="top: .5rem; left: .8rem;">
-      <svg
-        class="fill-current pointer-events-none text-white w-4 h-4"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-      >
-        <path
-          d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"
-        />
-      </svg>
-    </div>
+    <slot></slot>
   </div>
 </template>
 
@@ -25,5 +15,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+input:focus {
+  color: black;
+}
 </style>

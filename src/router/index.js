@@ -11,6 +11,7 @@ import Profile from '../views/Profile' /* need to add user */
 Vue.use(VueRouter)
 
 const routes = [
+  { path: '/', redirect: '/home' },
   {
     path: '/home',
     name: 'Home',
