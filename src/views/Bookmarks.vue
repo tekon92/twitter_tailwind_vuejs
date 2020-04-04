@@ -1,12 +1,16 @@
 <template>
-  <div>Bookmarks</div>
+  <div class="w-full">
+    <timeline v-for="n in 10" :key="n.id"/>
+  </div>
 </template>
 
 <script>
+import Timeline from '@/components/Timeline'
+
 export default {
-  name: 'Bookmarks'
+  name: 'Bookmark',
+  components: {
+    Timeline
+  }
 }
 </script>
-
-<style>
-</style>
