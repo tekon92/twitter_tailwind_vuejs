@@ -1,13 +1,13 @@
 <template>
-  <div id="app" class="container flex px-0 lg:px-4 h-screen overflow-scroll">
-    <div class="w-2/7 text-center px-4 py-2 sticky top-0 border-r hidden sm:block">
+  <div id="app" class="container mx-auto flex px-0 lg:px-4 h-screen overflow-scroll">
+    <div class="xl:w-2/7 w-1/7 text-center px-4 py-2 sticky top-0 border-r hidden sm:block">
       <sidebar />
     </div>
     <div class="w-full lg:w-4/7 overflow-y-scroll mid-content">
       <Header />
-      <Tweet v-if="this.$route.path === '/home'" />
+      <Tweet v-if="this.$route.path === '/home'" class="hidden md:block"/>
       <router-view />
-      <div class="sm:hidden flex justify-between sticky bottom-0 p-1 px-4 border-t bg-white">
+      <div class="flex justify-between sticky bottom-0 p-1 px-4 border-t bg-white sm:hidden">
         <sidebar-link
           v-for="lb in linkBottom"
           :key="lb.id"

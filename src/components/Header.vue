@@ -1,6 +1,12 @@
 <template>
-  <div class="flex justify-between bg-white border sticky top-0">
-    <h1 class="font-bold text-lg p-2" v-if="this.$route.name !== 'Explore'">{{ this.$route.name }}</h1>
+  <div class="flex justify-between bg-white border sticky top-0 p-4">
+    <div class="flex justify-start items-center" v-if="this.$route.name !== 'Explore'">
+      <img
+        src="https://remoteok.io/assets/jobs/91a57dac87f283c0dc336f10edec876d.png"
+        class="h-8 w-8 rounded-full mx-auto md:mx-0 md:mr-2 block sm:hidden mr-2"
+      />
+      <h1 class="font-bold text-lg p-2">{{ this.$route.name }}</h1>
+    </div>
     <search-bar class="p-2" v-else>
       <div class="absolute search-icon" style="top: 1.3rem; left: 1.2rem;">
         <svg

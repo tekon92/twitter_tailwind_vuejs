@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-start lg:items-start items-center text-black">
+  <div class="flex flex-col justify-start xl:items-start items-center text-black">
     <router-link
       to="/home"
       class="text-blue-600 mb-1 px-2 py-2 rounded-full items-center font-medium hover:bg-gray-200 font-bold text-xl"
@@ -27,9 +27,9 @@
     >
       <img
         src="https://remoteok.io/assets/jobs/91a57dac87f283c0dc336f10edec876d.png"
-        class="h-6 w-6 rounded-full lg:mr-4"
+        class="h-6 w-6 rounded-full xl:mr-4"
       />
-      <span class="hidden lg:flex">Profile</span>
+      <span class="hidden xl:block">Profile</span>
     </router-link>
     <router-link
       to="/list"
@@ -40,7 +40,7 @@
         fill="currentColor"
         stroke="currentColor"
         stroke-width="0"
-        class="w-6 h-6 lg:mr-4 opacity-70"
+        class="w-6 h-6 xl:mr-4 opacity-70"
       >
         <g>
           <path
@@ -51,19 +51,19 @@
           />
         </g>
       </svg>
-      <span class="hidden lg:flex">More</span>
+      <span class="hidden xl:block">More</span>
     </router-link>
     <div class="flex justify-center items-center w-full mt-4">
       <button
-        class="py-2 px-2 lg:px-20 bg-blue-500 hover:bg-blue-600 rounded-full items-center text-white font-bold"
+        class="py-2 px-2 xl:px-20 bg-blue-500 hover:bg-blue-600 rounded-full items-center text-white font-bold"
       >
-        <span class="hidden lg:flex">Tweet</span>
+        <span class="hidden xl:flex">Tweet</span>
         <svg
           viewBox="0 0 24 24"
           fill="currentColor"
           stroke="currentColor"
           stroke-width="0"
-          class="w-6 h-6 opacity-70 flow lg:hidden"
+          class="w-6 h-6 opacity-70 flow xl:hidden"
         >
           <g>
             <path

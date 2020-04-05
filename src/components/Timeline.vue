@@ -4,9 +4,9 @@
       <div class="flex justify-start">
         <img
           src="https://remoteok.io/assets/jobs/91a57dac87f283c0dc336f10edec876d.png"
-          class="h-12 w-12 rounded-full mx-auto md:mx-0 md:mr-2"
+          class="h-10 w-10 md:h-12 md:w-12 rounded-full mx-auto md:mx-0 md:mr-2"
         />
-        <div class="flex flex-col">
+        <div class="flex flex-col ml-2">
           <div class="flex justify-between items-center">
             <span class="flex">
               <h1 class="font-bold">Vue.js Developers</h1>
