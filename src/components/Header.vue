@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between bg-white border sticky top-0 p-4">
+  <div class="flex justify-between bg-white border sticky top-0 px-4 py-1">
     <div class="flex justify-start items-center" v-if="this.$route.name !== 'Explore'">
       <img
         src="https://remoteok.io/assets/jobs/91a57dac87f283c0dc336f10edec876d.png"
@@ -7,7 +7,7 @@
       />
       <h1 class="font-bold text-lg p-2">{{ this.$route.name }}</h1>
     </div>
-    <search-bar class="p-2" v-else>
+    <search-bar class="p-2 w-full" v-else>
       <div class="absolute search-icon" style="top: 1.3rem; left: 1.2rem;">
         <svg
           class="fill-current pointer-events-none text-gray-500 active:text-white w-4 h-4"
@@ -89,7 +89,7 @@
         fill="currentColor"
         class="w-6 h-6"
         stroke-width="0"
-        v-if="$route.path === '/explore'"
+        v-if="$route.path === '/explore' || $route.path === '/notifications'"
       >
         <g>
           <path

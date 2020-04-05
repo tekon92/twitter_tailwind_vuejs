@@ -19,7 +19,7 @@
     </div>
     <div class="hidden lg:block w-3/7 p-2">
     <!-- need to fix searchbar -->
-      <search-bar class="sticky top-0" v-if="showSearchBar">
+      <search-bar class="sticky top-0 w-full" v-if="showSearchBar">
         <div class="absolute search-icon" style="top: .8rem; left: .8rem;">
           <svg
             class="fill-current pointer-events-none text-gray-500 active:text-white w-4 h-4"
@@ -34,6 +34,15 @@
       </search-bar>
       <trends v-if="showTrends" />
       <who-to-follow v-if="showWhoToFollow" />
+      <div class="flex flex-col text-center items-center mt-20" v-if="showMessage">
+        <h1 class="font-bold text-xl">
+          You don’t have a message selected
+        </h1>
+        <p class="text-gray-500 text-sm">Choose one from your existing messages, or start a new one.</p>
+        <button class="bg-blue-500 p-2 w-2/4 rounded-full font-bold text-white">
+          New Message
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -63,6 +72,7 @@ export default {
       showSearchBar: false,
       showTrends: false,
       showWhoToFollow: false,
+      showMessage: false,
       linkBottom: [
         {
           id: 1,
@@ -111,6 +121,7 @@ export default {
         this.allShowTrue()
       } else if (this.$route.path === '/messages') {
         this.allShowFalse()
+        this.showMessage = true
       } else if (this.$route.path === '/bookmarks') {
         this.allShowTrue()
       } else if (this.$route.path === '/list') {
