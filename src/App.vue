@@ -124,10 +124,13 @@ export default {
         this.showMessage = true
       } else if (this.$route.path === '/bookmarks') {
         this.allShowTrue()
+        this.showMessage = false
       } else if (this.$route.path === '/list') {
         this.allShowTrue()
+        this.showMessage = false
       } else if (this.$route.path === '/profile') {
         this.allShowTrue()
+        this.showMessage = false
       } else {
         this.allShowFalse()
       }
@@ -141,6 +144,7 @@ export default {
       this.showSearchBar = false
       this.showTrends = false
       this.showWhoToFollow = false
+      this.showMessage = false
     }
   },
   created () {
