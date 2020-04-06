@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col border p-4 hover:bg-gray-200">
+  <div class="flex flex-col border p-4 hover:bg-gray-200" @click="move">
     <div class="flex justify-between">
       <div class="flex justify-start">
         <img
@@ -33,6 +33,20 @@
           >Most tutorials are made by people who never had a coding job. Most people who are honestly trying to learn how to code to get a job learn from tutorials. See the problem yet?</p>
         </div>
       </div>
+    </div>
+    <div v-if="this.$route.name === 'Tweet'" class="my-4">
+      <p class="text-gray-500 text-sm">
+        8:29 PM · Apr 6, 2020 ·
+        <a href="#" class="text-blue-500 hover:underline">Twitter for Android</a>
+      </p>
+    </div>
+    <div v-if="this.$route.name === 'Tweet'" class="flex justify-start border-t border-b my-2 p-2">
+      <a href="#" class="font-bold mr-2">
+        3 <span class="text-gray-700 font-light">Retweets</span>
+      </a>
+      <a href="#" class="font-bold mr-2">
+        3 <span class="text-gray-700 font-light">Likes</span>
+      </a>
     </div>
     <div class="flex justify-around mt-4 text-gray-700">
       <div class="flex items-center hover:text-blue-500">
@@ -115,7 +129,12 @@
 
 <script>
 export default {
-  name: 'Timeline'
+  name: 'Timeline',
+  methods: {
+    move () {
+      this.$router.push('/tekon92/status/123')
+    }
+  }
 }
 </script>
 

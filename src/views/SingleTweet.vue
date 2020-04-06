@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full">
-    <timeline v-for="n in 10" :key="n.id" />
+  <div>
+    <timeline />
   </div>
 </template>
 
@@ -8,9 +8,12 @@
 import Timeline from '@/components/Timeline'
 
 export default {
-  name: 'Home',
+  name: 'SingleTweet',
   components: {
     Timeline
   }
 }
 </script>
+
+<style>
+</style>

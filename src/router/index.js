@@ -7,6 +7,7 @@ import Messages from '../views/Messages'
 import Bookmarks from '../views/Bookmarks'
 import List from '../views/Lists' /* need to add user */
 import Profile from '../views/Profile' /* need to add user */
+import SingleTweet from '../views/SingleTweet'
 
 Vue.use(VueRouter)
 
@@ -51,9 +52,14 @@ const routes = [
     component: List
   },
   {
-    path: '/profile',
+    path: '/:username',
     name: 'Profile',
     component: Profile
+  },
+  {
+    path: '/:username/status/:id',
+    name: 'Tweet',
+    component: SingleTweet
   }
 ]
 

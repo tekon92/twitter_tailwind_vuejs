@@ -131,6 +131,8 @@ export default {
       } else if (this.$route.path === '/profile') {
         this.allShowTrue()
         this.showMessage = false
+      } else if (this.$route.name === 'Tweet') {
+        this.allShowTrue()
       } else {
         this.allShowFalse()
       }

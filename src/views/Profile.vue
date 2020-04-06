@@ -88,7 +88,7 @@
       <button class="w-full font-bold text-gray-600 px-3 py-4 block hover:text-blue-500 focus:outline-none">Media</button>
       <button class="w-full font-bold text-gray-600 px-3 py-4 block hover:text-blue-500 focus:outline-none">Likes</button>
     </nav>
-    <timeline v-for="n in 10" :key="n.id"/>
+    <timeline v-for="n in 10" :key="n.id" @click="move"/>
   </div>
 </template>
 
@@ -99,6 +99,11 @@ export default {
   name: 'Profile',
   components: {
     Timeline
+  },
+  methods: {
+    move () {
+      this.$router.push('home')
+    }
   }
 }
 </script>
