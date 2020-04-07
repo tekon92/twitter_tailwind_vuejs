@@ -4,6 +4,7 @@
       <img
         src="https://remoteok.io/assets/jobs/91a57dac87f283c0dc336f10edec876d.png"
         class="h-8 w-8 rounded-full mx-auto md:mx-0 md:mr-2 block sm:hidden mr-2"
+        v-if="this.$route.name !== 'Tweet' && this.$route.name !== 'Profile'"
       />
       <a
         @click="$router.go(-1)"
