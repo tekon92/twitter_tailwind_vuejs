@@ -8,6 +8,7 @@
       <Tweet v-if="this.$route.path === '/home'" class="hidden md:block"/>
       <div class="min-h-screen">
         <router-view />
+        <router-view class="app_view_modal" name="modal" />
       </div>
       <div class="flex justify-between sticky bottom-0 p-1 px-4 border-t bg-white sm:hidden">
         <sidebar-link
@@ -71,6 +72,7 @@ export default {
   },
   data () {
     return {
+      showModal: false,
       showSearchBar: false,
       showTrends: false,
       showWhoToFollow: false,
@@ -113,7 +115,7 @@ export default {
   },
   methods: {
     checkCurrentRoute () {
-      if (this.$route.path === '/home') {
+      if (this.$route.path === '/home' || this.$route.path === '/compose/tweet') {
         this.allShowTrue()
       } else if (this.$route.path === '/explore') {
         this.showSearchBar = false
@@ -149,10 +151,20 @@ export default {
       this.showTrends = false
       this.showWhoToFollow = false
       this.showMessage = false
+    },
+    modal () {
+      // e.preventDefault()
+      this.showModal = true
+      history.pushState('', 'title of page', '/compose/tweet')
     }
   },
   created () {
     this.checkCurrentRoute()
+  },
+  computed: {
+    isModal () {
+      return this.showModal
+    }
   },
   watch: {
     $route (to, from) {
@@ -165,11 +177,30 @@ export default {
 .mid-content::-webkit-scrollbar {
   display: none;
 }
-// .divtext {
-//     border: ridge 2px;
-//     padding: 5px;
-//     width: 20em;
-//     min-height: 5em;
-//     overflow: auto;
-// }
+.tweetModal {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 6vmin 4vmin;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(mix(#2c3e50, #000000, 30%), 0.85);
+  z-index: 99999;
+  padding: 3vmax;
+  cursor: zoom-out;
+}
+.modal_conatiner {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+  cursor: auto;
+  overflow: hidden;
+}
 </style>

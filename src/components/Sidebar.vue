@@ -31,32 +31,82 @@
       />
       <span class="hidden xl:block">Profile</span>
     </router-link>
-    <router-link
-      to="/list"
-      class="mb-1 px-2 py-2 rounded-full lg:rounded-lg flex items-center font-medium hover:text-blue-600 hover:bg-gray-200 font-bold text-xl"
+    <popper
+      trigger="clickToOpen"
+      :options="{
+      placement: 'top',
+      modifiers: { offset: { offset: '0,10px' } }
+    }"
     >
-      <svg
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        stroke="currentColor"
-        stroke-width="0"
-        class="w-6 h-6 xl:mr-4 opacity-70"
+      <div class="popper">
+        <div class="rounded-md bg-white shadow-xs text-left">
+          <div class="py-1">
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
+            >Edit</a>
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
+            >Duplicate</a>
+          </div>
+          <div class="border-t border-gray-100"></div>
+          <div class="py-1">
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
+            >Archive</a>
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
+            >Move</a>
+          </div>
+          <div class="border-t border-gray-100"></div>
+          <div class="py-1">
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
+            >Share</a>
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
+            >Add to favorites</a>
+          </div>
+          <div class="border-t border-gray-100"></div>
+          <div class="py-1">
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
+            >Delete</a>
+          </div>
+        </div>
+      </div>
+      <router-link
+        to="/list"
+        class="mb-1 px-2 py-2 rounded-full lg:rounded-lg flex items-center font-medium hover:text-blue-600 hover:bg-gray-200 font-bold text-xl"
+        slot="reference"
       >
-        <g>
-          <path
-            d="M16.5 10.25c-.965 0-1.75.787-1.75 1.75s.784 1.75 1.75 1.75c.964 0 1.75-.786 1.75-1.75s-.786-1.75-1.75-1.75zm0 2.5c-.414 0-.75-.336-.75-.75 0-.413.337-.75.75-.75s.75.336.75.75c0 .413-.336.75-.75.75zm-4.5-2.5c-.966 0-1.75.787-1.75 1.75s.785 1.75 1.75 1.75 1.75-.786 1.75-1.75-.784-1.75-1.75-1.75zm0 2.5c-.414 0-.75-.336-.75-.75 0-.413.337-.75.75-.75s.75.336.75.75c0 .413-.336.75-.75.75zm-4.5-2.5c-.965 0-1.75.787-1.75 1.75s.785 1.75 1.75 1.75c.964 0 1.75-.786 1.75-1.75s-.787-1.75-1.75-1.75zm0 2.5c-.414 0-.75-.336-.75-.75 0-.413.337-.75.75-.75s.75.336.75.75c0 .413-.336.75-.75.75z"
-          />
-          <path
-            d="M12 22.75C6.072 22.75 1.25 17.928 1.25 12S6.072 1.25 12 1.25 22.75 6.072 22.75 12 17.928 22.75 12 22.75zm0-20C6.9 2.75 2.75 6.9 2.75 12S6.9 21.25 12 21.25s9.25-4.15 9.25-9.25S17.1 2.75 12 2.75z"
-          />
-        </g>
-      </svg>
-      <span class="hidden xl:block">More</span>
-    </router-link>
+        <svg
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          stroke="currentColor"
+          stroke-width="0"
+          class="w-6 h-6 xl:mr-4 opacity-70"
+        >
+          <g>
+            <path
+              d="M16.5 10.25c-.965 0-1.75.787-1.75 1.75s.784 1.75 1.75 1.75c.964 0 1.75-.786 1.75-1.75s-.786-1.75-1.75-1.75zm0 2.5c-.414 0-.75-.336-.75-.75 0-.413.337-.75.75-.75s.75.336.75.75c0 .413-.336.75-.75.75zm-4.5-2.5c-.966 0-1.75.787-1.75 1.75s.785 1.75 1.75 1.75 1.75-.786 1.75-1.75-.784-1.75-1.75-1.75zm0 2.5c-.414 0-.75-.336-.75-.75 0-.413.337-.75.75-.75s.75.336.75.75c0 .413-.336.75-.75.75zm-4.5-2.5c-.965 0-1.75.787-1.75 1.75s.785 1.75 1.75 1.75c.964 0 1.75-.786 1.75-1.75s-.787-1.75-1.75-1.75zm0 2.5c-.414 0-.75-.336-.75-.75 0-.413.337-.75.75-.75s.75.336.75.75c0 .413-.336.75-.75.75z"
+            />
+            <path
+              d="M12 22.75C6.072 22.75 1.25 17.928 1.25 12S6.072 1.25 12 1.25 22.75 6.072 22.75 12 17.928 22.75 12 22.75zm0-20C6.9 2.75 2.75 6.9 2.75 12S6.9 21.25 12 21.25s9.25-4.15 9.25-9.25S17.1 2.75 12 2.75z"
+            />
+          </g>
+        </svg>
+        <span class="hidden xl:block">More</span>
+      </router-link>
+    </popper>
     <div class="flex justify-center items-center w-full mt-4">
-      <button
-        class="py-2 px-2 xl:px-20 bg-blue-500 hover:bg-blue-600 rounded-full items-center text-white font-bold"
-      >
+      <router-link class="py-2 px-2 xl:px-20 bg-blue-500 hover:bg-blue-600 rounded-full items-center text-white font-bold" to="/compose/tweet">
         <span class="hidden xl:flex">Tweet</span>
         <svg
           viewBox="0 0 24 24"
@@ -71,18 +121,21 @@
             />
           </g>
         </svg>
-      </button>
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
 import SidebarLink from '@/components/SidebarLink'
+import Popper from 'vue-popperjs'
+import 'vue-popperjs/dist/vue-popper.css'
 
 export default {
   name: 'Sidebar',
   components: {
-    SidebarLink
+    SidebarLink,
+    Popper
   },
   data () {
     return {
@@ -137,6 +190,11 @@ export default {
           route: '/list'
         }
       ]
+    }
+  },
+  methods: {
+    modal () {
+      this.$emit('clicked')
     }
   }
 }
