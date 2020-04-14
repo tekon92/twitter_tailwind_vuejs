@@ -177,30 +177,4 @@ export default {
 .mid-content::-webkit-scrollbar {
   display: none;
 }
-.tweetModal {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 6vmin 4vmin;
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(mix(#2c3e50, #000000, 30%), 0.85);
-  z-index: 99999;
-  padding: 3vmax;
-  cursor: zoom-out;
-}
-.modal_conatiner {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  border-radius: 15px;
-  cursor: auto;
-  overflow: hidden;
-}
 </style>

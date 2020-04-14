@@ -38,6 +38,7 @@ const routes = [
         if (to.matched[0].components) {
           to.matched[0].components.default = from.matched[0].components.default
           to.matched[0].components.modal = NewTweet
+          // Object.assign(to.params, from.params)
         }
       }
       next()
